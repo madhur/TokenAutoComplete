@@ -1,21 +1,16 @@
 repositories {
     mavenCentral()
+    google()
 }
 
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion "19.0.3"
+    namespace 'com.tokenautocomplete'
+    compileSdkVersion 34
 
     defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 19
+        minSdkVersion 21
+        targetSdkVersion 34
     }
-}
-
-task jar(type: Jar) {
-    dependsOn assembleRelease
-    baseName "tokenautocomplete"
-    from fileTree(dir: 'build/classes/release')
 }
